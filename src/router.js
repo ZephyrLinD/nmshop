@@ -52,7 +52,7 @@ export default new Router ({
                     name: 'order-pay',
                     component: OrderPay
                 }, {
-                    path: 'aliay',
+                    path: 'alipay',
                     name: 'alipay',
                     component: Alipay
                 }
