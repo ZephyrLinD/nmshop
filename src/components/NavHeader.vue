@@ -25,7 +25,52 @@
                         <span>智能硬件</span>
                         <div class="children">
                             <ul>
-                                <li class="porduct">
+                                <li class="product">
+                                    <a href="" target="_blank">
+                                        <div class="pro-img">
+                                            <img src="https://img.zephyrl.co/images/2020/09/11/30f77f513eb1d530cdc956d94d9cd25a.jpg" alt="">
+                                        </div>
+                                        <div class="pro-name">DS18B20 温度传感器</div>
+                                        <div class="pro-price">14.2元</div>
+                                    </a>
+                                </li>
+                                <li class="product">
+                                    <a href="" target="_blank">
+                                        <div class="pro-img">
+                                            <img src="https://img.zephyrl.co/images/2020/09/11/30f77f513eb1d530cdc956d94d9cd25a.jpg" alt="">
+                                        </div>
+                                        <div class="pro-name">DS18B20 温度传感器</div>
+                                        <div class="pro-price">14.2元</div>
+                                    </a>
+                                </li>
+                                <li class="product">
+                                    <a href="" target="_blank">
+                                        <div class="pro-img">
+                                            <img src="https://img.zephyrl.co/images/2020/09/11/30f77f513eb1d530cdc956d94d9cd25a.jpg" alt="">
+                                        </div>
+                                        <div class="pro-name">DS18B20 温度传感器</div>
+                                        <div class="pro-price">14.2元</div>
+                                    </a>
+                                </li>
+                                <li class="product">
+                                    <a href="" target="_blank">
+                                        <div class="pro-img">
+                                            <img src="https://img.zephyrl.co/images/2020/09/11/30f77f513eb1d530cdc956d94d9cd25a.jpg" alt="">
+                                        </div>
+                                        <div class="pro-name">DS18B20 温度传感器</div>
+                                        <div class="pro-price">14.2元</div>
+                                    </a>
+                                </li>
+                                <li class="product">
+                                    <a href="" target="_blank">
+                                        <div class="pro-img">
+                                            <img src="https://img.zephyrl.co/images/2020/09/11/30f77f513eb1d530cdc956d94d9cd25a.jpg" alt="">
+                                        </div>
+                                        <div class="pro-name">DS18B20 温度传感器</div>
+                                        <div class="pro-price">14.2元</div>
+                                    </a>
+                                </li>
+                                <li class="product">
                                     <a href="" target="_blank">
                                         <div class="pro-img">
                                             <img src="https://img.zephyrl.co/images/2020/09/11/30f77f513eb1d530cdc956d94d9cd25a.jpg" alt="">
@@ -39,11 +84,134 @@
                     </div>
                     <div class="item-menu">
                         <span>解决方案</span>
-                        <div class="children"></div>
+                        <div class="children">
+                            <ul>
+                                <li class="product">
+                                    <a href="" target="_blank">
+                                        <div class="pro-img">
+                                            <img src="https://img.zephyrl.co/images/2020/09/11/hasbian.png" alt="">
+                                        </div>
+                                        <div class="pro-name">树莓派 + HA入门智能家居</div>
+                                        <div class="pro-price">100元</div>
+                                    </a>
+                                </li>
+                                <li class="product">
+                                    <a href="" target="_blank">
+                                        <div class="pro-img">
+                                            <img src="https://img.zephyrl.co/images/2020/09/11/hasbian.png" alt="">
+                                        </div>
+                                        <div class="pro-name">树莓派 + HA入门智能家居</div>
+                                        <div class="pro-price">100元</div>
+                                    </a>
+                                </li>
+                                <li class="product">
+                                    <a href="" target="_blank">
+                                        <div class="pro-img">
+                                            <img src="https://img.zephyrl.co/images/2020/09/11/hasbian.png" alt="">
+                                        </div>
+                                        <div class="pro-name">树莓派 + HA入门智能家居</div>
+                                        <div class="pro-price">100元</div>
+                                    </a>
+                                </li>
+                                <li class="product">
+                                    <a href="" target="_blank">
+                                        <div class="pro-img">
+                                            <img src="https://img.zephyrl.co/images/2020/09/11/hasbian.png" alt="">
+                                        </div>
+                                        <div class="pro-name">树莓派 + HA入门智能家居</div>
+                                        <div class="pro-price">100元</div>
+                                    </a>
+                                </li>
+                                <li class="product">
+                                    <a href="" target="_blank">
+                                        <div class="pro-img">
+                                            <img src="https://img.zephyrl.co/images/2020/09/11/hasbian.png" alt="">
+                                        </div>
+                                        <div class="pro-name">树莓派 + HA入门智能家居</div>
+                                        <div class="pro-price">100元</div>
+                                    </a>
+                                </li>
+                                <li class="product">
+                                    <a href="" target="_blank">
+                                        <div class="pro-img">
+                                            <img src="https://img.zephyrl.co/images/2020/09/11/hasbian.png" alt="">
+                                        </div>
+                                        <div class="pro-name">树莓派 + HA入门智能家居</div>
+                                        <div class="pro-price">100元</div>
+                                    </a>
+                                </li>
+                                <li class="product">
+                                    <a href="" target="_blank">
+                                        <div class="pro-img">
+                                            <img src="https://img.zephyrl.co/images/2020/09/11/hasbian.png" alt="">
+                                        </div>
+                                        <div class="pro-name">树莓派 + HA入门智能家居</div>
+                                        <div class="pro-price">100元</div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="item-menu">
                         <span>开发板</span>
-                        <div class="children"></div>
+                        <div class="children">
+                            <ul>
+                                <li class="product">
+                                    <a href="" target="_blank">
+                                        <div class="pro-img">
+                                            <img src="https://img.zephyrl.co/images/2020/09/11/53bd9a37fbccfbd81cd97f90bfb0f25e.png" alt="">
+                                        </div>
+                                        <div class="pro-name">ESP8266 开发板</div>
+                                        <div class="pro-price">30.5元</div>
+                                    </a>
+                                </li>
+                                <li class="product">
+                                    <a href="" target="_blank">
+                                        <div class="pro-img">
+                                            <img src="https://img.zephyrl.co/images/2020/09/11/53bd9a37fbccfbd81cd97f90bfb0f25e.png" alt="">
+                                        </div>
+                                        <div class="pro-name">ESP8266 开发板</div>
+                                        <div class="pro-price">30.5元</div>
+                                    </a>
+                                </li>
+                                <li class="product">
+                                    <a href="" target="_blank">
+                                        <div class="pro-img">
+                                            <img src="https://img.zephyrl.co/images/2020/09/11/53bd9a37fbccfbd81cd97f90bfb0f25e.png" alt="">
+                                        </div>
+                                        <div class="pro-name">ESP8266 开发板</div>
+                                        <div class="pro-price">30.5元</div>
+                                    </a>
+                                </li>
+                                <li class="product">
+                                    <a href="" target="_blank">
+                                        <div class="pro-img">
+                                            <img src="https://img.zephyrl.co/images/2020/09/11/53bd9a37fbccfbd81cd97f90bfb0f25e.png" alt="">
+                                        </div>
+                                        <div class="pro-name">ESP8266 开发板</div>
+                                        <div class="pro-price">30.5元</div>
+                                    </a>
+                                </li>
+                                <li class="product">
+                                    <a href="" target="_blank">
+                                        <div class="pro-img">
+                                            <img src="https://img.zephyrl.co/images/2020/09/11/53bd9a37fbccfbd81cd97f90bfb0f25e.png" alt="">
+                                        </div>
+                                        <div class="pro-name">ESP8266 开发板</div>
+                                        <div class="pro-price">30.5元</div>
+                                    </a>
+                                </li>
+                                <li class="product">
+                                    <a href="" target="_blank">
+                                        <div class="pro-img">
+                                            <img src="https://img.zephyrl.co/images/2020/09/11/53bd9a37fbccfbd81cd97f90bfb0f25e.png" alt="">
+                                        </div>
+                                        <div class="pro-name">ESP8266 开发板</div>
+                                        <div class="pro-price">30.5元</div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 <div class="header-search">
@@ -116,7 +284,7 @@ export default {
                             content: ' ';
                             @include bgImg(55px, 55px, '/imgs/mi-home.png', 55px);
                         }
-                        &:hover {
+                        &:hover:before {
                             margin-left: -55px;
                             transition: margin .2s;
 
@@ -155,7 +323,7 @@ export default {
                             border-top: 1px solid #E5E5E5;
                             box-shadow: 0px 7px 6px 0px rgba(0, 0, 0, 0.11);
                             z-index: 10;
-                            transition: all;
+                            transition: all .5s;
                             .product {
                                 position: relative;
                                 float: left;
