@@ -208,7 +208,7 @@ export default {
             this.axios.get('/products', {
                 params: {
                     categoryId: '100012',
-                    pagesize: 6
+                    pageSize: 6
                 }
             }).then((res)=>{
                 if (res.list.length >= 6) {
