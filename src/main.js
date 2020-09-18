@@ -4,6 +4,7 @@ import axios from 'axios'
 import VueAxios from 'vue-axios'
 import router from './router'
 import VueLazyLoad from 'vue-lazyload'
+import VueCookie from 'vue-cookie'
 
 
 // 根据前端的跨域方式做调整
@@ -21,10 +22,12 @@ axios.interceptors.response.use(function (response) {
     window.location.href = '/#/login'
   } else {
     alert(res.meg);
+    return Promise.reject(res);
   }
 });
 
 Vue.use(VueAxios, axios);
+Vue.use(VueCookie);
 Vue.use(VueLazyLoad, {
   loading: '/imgs/loading-svg/loading-bars.svg'
 })
