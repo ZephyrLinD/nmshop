@@ -120,6 +120,7 @@ export default {
         }
         .btn{
           width:100%;
+          height: 100%;
           line-height:50px;
           margin-top:10px;
           font-size:16px;
