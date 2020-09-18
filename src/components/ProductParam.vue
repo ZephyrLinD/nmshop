@@ -10,7 +10,7 @@
                 <a href="">用户评价</a>
                 <slot name="buy"></slot>
             </div>
-        </div> 
+        </div>
     </div>
 </template>
 
