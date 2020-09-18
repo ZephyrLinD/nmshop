@@ -1,16 +1,16 @@
 <template>
   <div class="product">
-    <product-param title="小米9">
+    <product-param :title="product.name">
       <template v-slot:buy>
-        <button class="btn">立即购买</button>
+        <button class="btn" @click="buy">立即购买</button>
       </template>
     </product-param>
     <div class="content">
       <div class="item-bg">
-        <h2>小米8</h2>
-        <h3>小米8 奥立给 王立马</h3>
+        <h2>{{product.name}}</h2>
+        <h3>{{product.subtitle}}</h3>
         <p>
-          <a href="" id="">全球首款单频 GPRS</a>
+       '   <a href="" id="">全球首款单频 GPR'S</a>
           <span>|</span>
           <a href="" id="">WP同款小龙200</a>
           <span>|</span>
@@ -19,7 +19,7 @@
           <a href="" id="">紫外逼脸识别</a>
         </p>
         <div class="price">
-          <span>￥<em>2599</em></span>
+          <span>￥<em>{{product.price}}</em></span>
         </div>
       </div>
       <div class="item-bg-2"></div>
@@ -77,12 +77,25 @@
         }
       }
     },
+    mounted() {
+      this.getProductInfo();
+    },
     methods:{
       closeVideo(){
         this.showSlide='slideUp';
         setTimeout(()=>{
           this.showSlide='';
         },600)
+      },
+      getProductInfo() {
+        let id = this.$route.params.id;
+        this.axios.get(`/products/${id}`).then((res) => {
+          this.product = res;
+        })
+      },
+      buy() {
+        let id = this.$route.params.id;
+        this.$router.push(`/detail/${id}`);
       }
     }
   }
@@ -124,12 +137,12 @@
         }
       }
       .item-bg-2{
-        background:url(/imgs/product/product-bg-2.png) no-repeat center;
+        background:url('/imgs/product/product-bg-2.png') no-repeat center;
         height:480px;
         background-size:1226px 397px;
       }
       .item-bg-3{
-        background:url(/imgs/product/product-bg-3.png) no-repeat center;
+        background:url('/imgs/product/product-bg-3.png') no-repeat center;
         height:638px;
         background-size:cover;
       }
