@@ -39,6 +39,7 @@ Vue.use(VueLazyLoad, {
   loading: '/imgs/loading-svg/loading-bars.svg'
 })
 Vue.config.productionTip = false
+Vue.prototype.$message = Message;
 
 new Vue({
   store,
