@@ -92,8 +92,8 @@
       btnType="1" 
       modalType="middle" 
       :showModal="showModal"
-      v-on:submit="goToCart"
-      v-on:cancel="showModal = false"
+      @submit="goToCart"
+      @cancel="showModal = false"
       >
       <template v-slot:body>
         <p>商品添加成功</p>
@@ -200,7 +200,8 @@ export default {
           img: '/imgs/ads/ads-4.jpg'
         }, 
       ],
-      sensorList: []
+      sensorList: [],
+      showModal:false
     }
   },
   mounted() {
@@ -219,16 +220,16 @@ export default {
         this.sensorList = [res.list.slice(0, 4), res.list.slice(4, 8)];
       })
     },
-    addCart() {
-      // this.axios.port('/carts', {
-      //   productId: id,
-      //   selected: true
-      // }).then(() => {
-
-      // }).catch(() => {
-      //   this.modal = true
-      // })
-      this.modal = true
+    addCart(id) {
+      this.axios.post('/carts', {
+        productId: id,
+        selected: true
+      }).then((res) => {
+        this.showModal = true;
+        this.$store.dispatch('saveCartCount', res.cartTotalQuantity);
+      }).catch(() => {
+        this.showModal = true
+      });
     },
     goToCart() {
       this.$router.push('/cart');
