@@ -58,6 +58,7 @@
   import OrderHeader from './../components/OrderHeader'
   import ServiceBar from './../components/ServiceBar'
   import NavFooter from './../components/NavFooter'
+  import { Message } from 'element-ui'
   export default{
     name:'index',
     components:{
@@ -89,13 +90,13 @@
               selected = item.productSelected;
           if (type == '-') {
               if (quantity == 1) {
-                  alert('商品至少保留一件');
+                  Message.warning('商品至少保留一件');
                   return;
               }
               --quantity;
           } else if (type == '+') {
               if (quantity >= item.productStock) {
-                  alert('商品数量不能超过库存数量');
+                  Message.waring('商品数量不能超过库存数量');
                   return;
               }
               ++quantity;
@@ -125,13 +126,14 @@
       },
       delProduct(item) {
           this.axios.delete(`/carts/${item.productId}`).then((res) => {
+              Message.success('删除成功')
               this.renderData(res);
           })
       },
       order() {
           let isCheck = this.list.every(item=>!item.productSelected);
           if(isCheck) {
-              alert('请选择一件商品');
+              Message.warning('请选择一件商品');
           } else {
               this.$router.push('/order/confirm');
           }

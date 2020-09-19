@@ -6,6 +6,8 @@ import router from './router'
 import VueLazyLoad from 'vue-lazyload'
 import VueCookie from 'vue-cookie'
 import store from './store'
+import { Message } from 'element-ui'
+import 'element-ui/lib/theme-chalk/index.css'
 
 
 // 根据前端的跨域方式做调整
@@ -26,7 +28,7 @@ axios.interceptors.response.use(function (response) {
     }
     return Promise.reject(res);
   } else {
-    alert(res.meg);
+    Message.warning(res.meg);
     return Promise.reject(res);
   }
 });
