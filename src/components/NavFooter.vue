@@ -1,7 +1,7 @@
 <template>
     <div class="footer">
         <div class="footer-logo">
-            <img src="/imgs/logo-footer.png" alt="">
+            <img src="/imgs/footer-logo.png" alt="">
             <p>纳米商城</p>
         </div>
         <div class="footer-link">
@@ -34,7 +34,6 @@ export default {
         margin-bottom: 31px;
         img {
             width: 53px;
-            height: 36px;
             margin-bottom:13px;
         }
     }

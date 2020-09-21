@@ -20,7 +20,7 @@
           </div>
           <div class="tips">
             <div class="sms" @click="register">手机短信登录/注册</div>
-            <div class="reg">立即注册<span>|</span>忘记密码？</div>
+            <div class="reg" @click="register">立即注册<span>|</span>忘记密码？</div>
           </div>
         </div>
       </div>
@@ -38,7 +38,7 @@
 </template>
 <script>
 import { mapActions } from 'vuex';
-import { Message } from 'element-ui';
+// import { Message } from 'element-ui';
 export default {
   name: 'login',
   data(){
@@ -68,18 +68,13 @@ export default {
     },
     ...mapActions(['saveUserName']),
     register(){
-      this.axios.post('/user/register',{
-        username:'admin1',
-        password:'admin1',
-        email:'admin1@163.com'
-      }).then(()=>{
-        Message.success('注册成功');
-      })
+      this.$router.push("/register");
     }
   }
 }
 </script>
 <style lang="scss">
+@import "./../assets/scss/config.scss";
 .login{
   &>.container{
     height:113px;
@@ -108,7 +103,7 @@ export default {
           text-align:center;
           margin:40px auto 49px;
           .checked{
-            color:#FF6600;
+            color:$colorA;
           }
           .sep-line{
             margin:0 32px;
@@ -141,7 +136,7 @@ export default {
           font-size:14px;
           cursor:pointer;
           .sms{
-            color:#FF6600;
+            color:$colorA;
           }
           .reg{
             color:#999999;
