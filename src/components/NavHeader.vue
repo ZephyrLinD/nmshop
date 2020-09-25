@@ -24,7 +24,7 @@
                 </div>
                 <div class="header-menu">
                     <div class="item-menu">
-                        <span>电工设备</span>
+                        <span>电子工具</span>
                         <div class="children">
                             <ul>
                                 <li class="product" v-for="(item,index) in toolsList" :key="index">
