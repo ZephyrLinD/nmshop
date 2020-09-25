@@ -5,26 +5,25 @@
       <div class="container clearfix">
         <div class="Swiper">
           <swiper :options="swiperOption">
-              <swiper-slide><img src="/imgs/detail/phone-1.jpg" alt=""></swiper-slide>
-              <swiper-slide><img src="/imgs/detail/phone-2.jpg" alt=""></swiper-slide>
-              <swiper-slide><img src="/imgs/detail/phone-3.jpg" alt=""></swiper-slide>
-              <swiper-slide><img src="/imgs/detail/phone-4.jpg" alt=""></swiper-slide>
+              <swiper-slide v-for="(prodImgs, index) in product.subImages" :key="index">
+                <img v-lazy="prodImgs" alt="">
+              </swiper-slide>
               <!-- Optional controls -->
               <div class="swiper-pagination"  slot="pagination"></div>
           </swiper>
         </div>
         <div class="content">
           <h2 class="item-title">{{product.name}}</h2>
-          <p class="item-info">相机全新升级 / 960帧超慢动作 / 手持超级夜景 / 全球首款双频GPS / 骁龙845处理器 / 红<br/>外人脸解锁 / AI变焦双摄 / 三星 AMOLED 屏</p>
-          <div class="delivery">小米自营</div>
-          <div class="item-price">{{product.price}}<span class="del">2999元</span></div>
+          <p class="item-info">{{product.subtitle}}</p>
+          <div class="delivery">纳米商城自营</div>
+          <div class="item-price">{{product.price}} 元</div>
           <div class="line"></div>
           <div class="item-addr">
             <i class="icon-loc"></i>
             <div class="addr">北京 北京市 朝阳区 安定门街道</div>
             <div class="stock">有现货</div>
           </div>
-          <div class="item-version clearfix">
+          <!-- <div class="item-version clearfix">
             <h2>选择版本</h2>
             <div class="phone fl" :class="{'checked':version==1}" @click="version=1">6GB+64GB 全网通</div>
             <div class="phone fr" :class="{'checked':version==2}" @click="version=2">4GB+64GB 移动4G</div>
@@ -35,10 +34,10 @@
               <span class="color"></span>
               深空灰
             </div>
-          </div>
+          </div> -->
           <div class="item-total">
             <div class="phone-info clearfix">
-              <div class="fl">{{product.name}} {{version==1?'6GB+64GB 全网通':'4GB+64GB 移动4G'}} 深灰色</div>
+              <div class="fl">{{product.name}}</div>
               <div class="fr">{{product.price}}元</div>
             </div>
             <div class="phone-total">总计：{{product.price}}元</div>
@@ -102,6 +101,8 @@ export default{
     getProductInfo() {
       this.axios.get(`/products/${this.id}`).then((res) => {
         this.product = res;
+        this.product.subImages = res.subImages.split(',');
+        console.log(this.product.subImages)
       })
     }
   }
@@ -113,12 +114,13 @@ export default{
   .detail{
     .wrapper{
       .Swiper{
+        border: 1px solid rgba(0,0,0, 0.05);
         float:left;
-        width:642px;
+        width:583px;
         height:617px;
         margin-top:5px;
         img{
-          width:100%;
+          width:583px;
           height:100%;
         }
       }

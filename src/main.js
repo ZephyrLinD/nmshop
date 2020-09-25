@@ -44,6 +44,7 @@ Vue.use(VueLazyLoad, {
 })
 Vue.config.productionTip = false
 Vue.prototype.$message = Message;
+Vue.config.devtools = true
 
 new Vue({
   store,

@@ -14,11 +14,11 @@
               <div class="item-info fl">
                 {{order.createTime}}
                 <span>|</span>
-                {{order.receiverName}}
+                {{order.shippingVo.receiverName}}
                 <span>|</span>
                 订单号：{{order.orderNo}}
                 <span>|</span>
-                {{order.paymentTypeDesc}}
+                在线支付
               </div>
               <div class="item-money fr">
                 <span>应付金额：</span>
@@ -34,7 +34,12 @@
                   </div>
                   <div class="good-name">
                     <div class="p-name">{{item.productName}}</div>
-                    <div class="p-money">{{item.totalPrice + 'X' + item.quantity}}元</div>
+                    <div class="p-money">{{item.totalPrice + ' x ' + item.quantity}} 元</div>
+                  </div>
+                  <div class="item-money fr">
+                    <span>总价：</span>
+                    <span class="money">{{item.totalPrice}}</span>
+                    <span>元</span>
                   </div>
                 </div>
               </div>
@@ -120,9 +125,14 @@
           this.total = res.total;
           this.showNextPage = res.hasNextPage;
           this.busy = false;
+          // 转换时间格式
+          for ( var i = 0; i < this.list.length; i++) {
+            this.list[i].createTime = new Date(this.list[i].createTime).toLocaleString()
+          }
         }).catch(()=>{
           this.loading = false;
         })
+
       },
       goPay(orderNo){
         // 三种路由跳转方式
@@ -214,20 +224,33 @@
           .order-content{
             padding:0 43px;
             .good-box{
-              width:88%;
+              width:100%;
               .good-list{
                 display: flex;
                 align-items: center;
                 height:145px;
                 .good-img{
                   width:112px;
+                  padding-right: 20px;
                   img{
                     width:100%;
                   }
                 }
                 .good-name{
+                  .p-name {
+                    margin-bottom: 20px;
+                    font-size: 24px;
+                  }
+
                   font-size:20px;
                   color:$colorB;
+                }
+                .item-money {
+                  margin-left: auto;
+                  font-size: 16px;
+                  .money {
+                    font-size: 26px;
+                  }
                 }
               }
             }

@@ -24,10 +24,10 @@
                 </div>
                 <div class="header-menu">
                     <div class="item-menu">
-                        <span>智能硬件</span>
+                        <span>电工设备</span>
                         <div class="children">
                             <ul>
-                                <li class="product" v-for="(item,index) in productList" :key="index">
+                                <li class="product" v-for="(item,index) in toolsList" :key="index">
                                     <a :href="'/#/product/' + item.id" target="_blank">
                                         <div class="pro-img">
                                             <img v-lazy="item.mainImage" :alt="item.subtitle">
@@ -40,70 +40,16 @@
                         </div>
                     </div>
                     <div class="item-menu">
-                        <span>解决方案</span>
+                        <span>传感器</span>
                         <div class="children">
                             <ul>
-                                <li class="product">
-                                    <a href="" target="_blank">
+                                <li class="product" v-for="(item,index) in sensorList" :key="index">
+                                    <a :href="'/#/product/' + item.id" target="_blank">
                                         <div class="pro-img">
-                                            <img src="https://img.zephyrl.co/images/2020/09/11/hasbian.png" alt="">
+                                            <img v-lazy="item.mainImage" :alt="item.subtitle">
                                         </div>
-                                        <div class="pro-name">树莓派 + HA入门智能家居</div>
-                                        <div class="pro-price">100元</div>
-                                    </a>
-                                </li>
-                                <li class="product">
-                                    <a href="" target="_blank">
-                                        <div class="pro-img">
-                                            <img src="https://img.zephyrl.co/images/2020/09/11/hasbian.png" alt="">
-                                        </div>
-                                        <div class="pro-name">树莓派 + HA入门智能家居</div>
-                                        <div class="pro-price">100元</div>
-                                    </a>
-                                </li>
-                                <li class="product">
-                                    <a href="" target="_blank">
-                                        <div class="pro-img">
-                                            <img src="https://img.zephyrl.co/images/2020/09/11/hasbian.png" alt="">
-                                        </div>
-                                        <div class="pro-name">树莓派 + HA入门智能家居</div>
-                                        <div class="pro-price">100元</div>
-                                    </a>
-                                </li>
-                                <li class="product">
-                                    <a href="" target="_blank">
-                                        <div class="pro-img">
-                                            <img src="https://img.zephyrl.co/images/2020/09/11/hasbian.png" alt="">
-                                        </div>
-                                        <div class="pro-name">树莓派 + HA入门智能家居</div>
-                                        <div class="pro-price">100元</div>
-                                    </a>
-                                </li>
-                                <li class="product">
-                                    <a href="" target="_blank">
-                                        <div class="pro-img">
-                                            <img src="https://img.zephyrl.co/images/2020/09/11/hasbian.png" alt="">
-                                        </div>
-                                        <div class="pro-name">树莓派 + HA入门智能家居</div>
-                                        <div class="pro-price">100元</div>
-                                    </a>
-                                </li>
-                                <li class="product">
-                                    <a href="" target="_blank">
-                                        <div class="pro-img">
-                                            <img src="https://img.zephyrl.co/images/2020/09/11/hasbian.png" alt="">
-                                        </div>
-                                        <div class="pro-name">树莓派 + HA入门智能家居</div>
-                                        <div class="pro-price">100元</div>
-                                    </a>
-                                </li>
-                                <li class="product">
-                                    <a href="" target="_blank">
-                                        <div class="pro-img">
-                                            <img src="https://img.zephyrl.co/images/2020/09/11/hasbian.png" alt="">
-                                        </div>
-                                        <div class="pro-name">树莓派 + HA入门智能家居</div>
-                                        <div class="pro-price">100元</div>
+                                        <div class="pro-name">{{item.name}}</div>
+                                        <div class="pro-price">{{item.price | currency}}</div>
                                     </a>
                                 </li>
                             </ul>
@@ -113,58 +59,13 @@
                         <span>开发板</span>
                         <div class="children">
                             <ul>
-                                <li class="product">
-                                    <a href="" target="_blank">
+                                <li class="product" v-for="(item,index) in boardList" :key="index">
+                                    <a :href="'/#/product/' + item.id" target="_blank">
                                         <div class="pro-img">
-                                            <img src="https://img.zephyrl.co/images/2020/09/11/53bd9a37fbccfbd81cd97f90bfb0f25e.png" alt="">
+                                            <img v-lazy="item.mainImage" :alt="item.subtitle">
                                         </div>
-                                        <div class="pro-name">ESP8266 开发板</div>
-                                        <div class="pro-price">30.5元</div>
-                                    </a>
-                                </li>
-                                <li class="product">
-                                    <a href="" target="_blank">
-                                        <div class="pro-img">
-                                            <img src="https://img.zephyrl.co/images/2020/09/11/53bd9a37fbccfbd81cd97f90bfb0f25e.png" alt="">
-                                        </div>
-                                        <div class="pro-name">ESP8266 开发板</div>
-                                        <div class="pro-price">30.5元</div>
-                                    </a>
-                                </li>
-                                <li class="product">
-                                    <a href="" target="_blank">
-                                        <div class="pro-img">
-                                            <img src="https://img.zephyrl.co/images/2020/09/11/53bd9a37fbccfbd81cd97f90bfb0f25e.png" alt="">
-                                        </div>
-                                        <div class="pro-name">ESP8266 开发板</div>
-                                        <div class="pro-price">30.5元</div>
-                                    </a>
-                                </li>
-                                <li class="product">
-                                    <a href="" target="_blank">
-                                        <div class="pro-img">
-                                            <img src="https://img.zephyrl.co/images/2020/09/11/53bd9a37fbccfbd81cd97f90bfb0f25e.png" alt="">
-                                        </div>
-                                        <div class="pro-name">ESP8266 开发板</div>
-                                        <div class="pro-price">30.5元</div>
-                                    </a>
-                                </li>
-                                <li class="product">
-                                    <a href="" target="_blank">
-                                        <div class="pro-img">
-                                            <img src="https://img.zephyrl.co/images/2020/09/11/53bd9a37fbccfbd81cd97f90bfb0f25e.png" alt="">
-                                        </div>
-                                        <div class="pro-name">ESP8266 开发板</div>
-                                        <div class="pro-price">30.5元</div>
-                                    </a>
-                                </li>
-                                <li class="product">
-                                    <a href="" target="_blank">
-                                        <div class="pro-img">
-                                            <img src="https://img.zephyrl.co/images/2020/09/11/53bd9a37fbccfbd81cd97f90bfb0f25e.png" alt="">
-                                        </div>
-                                        <div class="pro-name">ESP8266 开发板</div>
-                                        <div class="pro-price">30.5元</div>
+                                        <div class="pro-name">{{item.name}}</div>
+                                        <div class="pro-price">{{item.price | currency}}</div>
                                     </a>
                                 </li>
                             </ul>
@@ -189,7 +90,9 @@ export default {
     name: 'nav-header',
     data() {
         return {
-            productList: []
+            toolsList: [],
+            sensorList: [],
+            boardList: []
         }
     },
     computed: {
@@ -208,7 +111,9 @@ export default {
         }
     },
     mounted() {
-        this.getProductList();
+        this.getToolsList();
+        this.getBoardList();
+        this.getSensorList();
         let params = this.$route.params
         if (params && params.from == 'login') {
             this.getCartCount();
@@ -231,15 +136,39 @@ export default {
                 this.$store.dispatch('saveCartCount',res);
             })
         },
-        getProductList() {
+        getToolsList() {
             this.axios.get('/products', {
                 params: {
-                    categoryId: '100012',
+                    categoryId: '100001',
                     pageSize: 6
                 }
             }).then((res)=>{
                 if (res.list.length >= 6) {
-                    this.productList = res.list;
+                    this.toolsList = res.list;
+                }
+            })
+        },
+        getSensorList() {
+            this.axios.get('/products', {
+                params: {
+                    categoryId: '100002',
+                    pageSize: 6
+                }
+            }).then((res)=>{
+                if (res.list.length >= 6) {
+                    this.sensorList = res.list;
+                }
+            })
+        },
+        getBoardList() {
+            this.axios.get('/products', {
+                params: {
+                    categoryId: '100003',
+                    pageSize: 6
+                }
+            }).then((res)=>{
+                if (res.list.length >= 6) {
+                    this.boardList = res.list;
                 }
             })
         },

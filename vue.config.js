@@ -4,7 +4,7 @@ module.exports = {
       port:8080,
       proxy:{
         '/api':{
-          target:'http://mall-pre.springboot.cn',
+          target:'http://nmshop.zephyrl.co:8080/',
           changeOrigin:true,
           pathRewrite:{
             '/api':''
@@ -12,8 +12,8 @@ module.exports = {
         }
       }
     },
-    productionSourceMap: false,
-    chainWebpack:(config)=>{
-      config.plugins.delete('prefetch')
-    }
+    // productionSourceMap: false,
+    // chainWebpack:(config)=>{
+    //   config.plugins.delete('prefetch')
+    // }
   }
