@@ -124,7 +124,7 @@ export default {
             this.$router.push('/login')
         },
         logout() {
-            this.axios.post('/user/logout').then(()=>{
+            this.axios.get('/user/logout').then(()=>{
                 this.$message.success('退出成功');
                 this.$cookie.set('userid', '', {expires: '-1'});
                 this.$store.dispatch('saveUserName', '');
